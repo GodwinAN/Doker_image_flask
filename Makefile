@@ -11,11 +11,11 @@ format:
 run:
 	python app.py
 
-run-uvicorn:
-	uvicorn main:app --reload
+run-docker:
+	docker run -p 80:5000 -v $(pwd):/app helloapp
 
 killweb:
-	sudo killall uvicorn
+	#sudo killall uvicorn
 
 lint:
 	pylint --disable=R,C main.py
