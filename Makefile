@@ -9,7 +9,7 @@ format:
 	black *.py
 
 run:
-	python main.py
+	python app.py
 
 run-uvicorn:
 	uvicorn main:app --reload
